@@ -1,0 +1,22 @@
+redes profundas:
+
+q3: 	motivação do B<m: realizar mais interações a cada época
+    	motivação do B>1: muito ruidoso, B>1 pode evitar passos muito ruidosos
+
+	B apropriado: suficientemente grande para o treinamento ser rápido
+
+q4:	soma vetorial aproveitando os gradientes anteriores
+
+q5:	ro1, ro2, 
+
+q6:	a) 	keras: fit(bath, epochs, ...), continua de onde parou
+		sk: reinicia o modelo
+
+	b)	keras: retorna a saída da rede (sigmoid, por ex)
+		sk: retorna as classes
+
+	c) 	keras permite tensores maiores que 2d
+		sk: recebe um vetor achatado
+
+	d)	sk: define ativação para camadas ocultas, nao determina numero de unidades na camada de saída
+		keras: precisa especificar tudo
