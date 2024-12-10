@@ -1,0 +1,335 @@
+Slide 1:
+Ah então gente boa noite já quase à noite né
+Eh então hoje eu vou apresentar um pouquinho para vocês sobre computação quântica primeiramente quis agradecer né
+a oportunidade de falar um pouquinho computação quântica antes de começar só queria me apresentar eh eu sou doutorando eh em Ciência da Computação
+ali na ur Ah eu faço parte do o grupo de comunicação qua da US eu faço parte
+desde o início do grupo lá em 2017 então eu fiz meu TCC dentro do grupo fiz meu mestrar dentro do grupo e agora também
+fazero meu doutorado ali dentro do grupo e é justamente no tema que eu vou apresentar um pouquinho aqui para vocês
+que é como programar o computador quântico e Ah eu também envolvo um pouquinho ali de como simular o computador códico mas F um pouquinho
+fora da apresentação Eu também tenho uma Startup a quanto loop ah essa uma Startup tem o objetivo de facilitar
+oaumento de soluções quânticas e também facilitar a adoção da Computação
+ftica gente só vou tá um pouquinho cortando os
+slides ver acho só só corr é só só corrido
+então ah Eu dividi essa apresentação em três partes eu quero começar um pouco
+
+Slide 2:
+começar motivando um pouquinho do comutação F para vocês falar né Por que que computação quântica é importante a a
+onde que a computação quântica pode ser aplicado e para dar um uma perspectiva de porqu Néa importar essa área depois
+eu vou falar um pouquinho das características específicas da Computação quântica O que que a computação quântica nos traz ah nos traz
+a mais né do que a computação clássica não tem e por fim bem rapidinho a gente
+vai ver um pouquinho Como construir um um primeiro programa quântico usando o Python usando justamente também aquela
+biblioteca Ah que a gente desenvolve dentro do de computação quântica você vai passar pro
+
+Slide 3:
+próximo para começar aqui a apresentação Eu trouxe um uma informação do mackin ah
+onde ele estipula qual que vai ser o impacto da Computação quântica em alguns setores da indústria aqui é bem
+Interessante que dá para ver mais ou menos um pouquinho ah do que que né o mercado espera da Computação quântica e
+também dá para ver aonde a computação qu vai poder ser aplicada aqui né ele pega cinco setores vem Chaves e estipula que
+até 2035 a comunicação Point vai trazer um lucro para esses setores de até 2
+trilhões de dólares é um um ganho bem alto né ah e aqui ele também traz quais setores
+né vão ter um ganho primeiro na computação quântica tá bem difícil de ler mas aqui no início é a o mercado
+financeiro dentro do mercado financeiro a gente tem problemas de utilização vou dar um exemplo imag a gente tem uma
+carteira de investimento ah onde a gente vai investir né em ações e empresas como que a gente escolhe quais ações de
+maneira que a gente vai darum risco específico eh maximizar nosso lucro Esse é um
+problema que a gente chama um problema de otimização Hoje em dia a gente usa técnicas com eh heurística até Ah até
+inteligência artificial para resolver isso e a gente espera que a computação ctica vai conseguir resolver esse tipo
+de problema de maneira mais eficiente aqui já é bom salientar né que o computador quântico ele não é uma bala
+de prata pra computação Ah ele não vem para substituir a nossa computação clássica ele não vem para ah a gente
+todo mundo tem no computador quântico e todo problema vai ser resolvido pel um computador quântico existe uma classe de
+problemas específicos que a gente espera que seja melhor ah resolvido dentro do computador quântico e aqui n os progas
+de finança estão dentro disso outros dois setores aqui bem interessante a gente vê na indústria química e
+Indústria Farmacêutica ah dentro dessas indústrias muitas vezes a gente tem uma questão de simulação a gente quer
+simular por exemplo a interação entre moléculas a interação entre átomos Ah e essas simulações hoje elas são rodadas
+de supercomputadores demoram muito tempo exitar Ah e essas simulações elas são
+modeladas de maneira que a gente vai modelar uma interação dentro de um sistema quântico se a gente tá pensando
+em moléculas a gente tá pensando em átomos é dentro do ah do tamanho né do quântico e usar um computador clássico
+para resolver esse problema é extremamente difícil e como o nome sugere né um computador quântico ele é
+um sistema quântico então um dos primeiros problemas que a gente pretende abordar né ter ganho usando computador
+quântico é justamente em simular outros sistemas quânticos como por exemplo simular a interação molecular ali pra
+indú farmacêutica e também a questão de química quântica e um outro setor aqui
+que tem bastante que a gente consegue ver é a questão de transporte logística dentro desse setor se a gente fala
+logística né quem d computação já lembra de cachir de Viajante né né a gente tem uma rota que a gente quer fazer de
+entregas e otimizar essa rota fazer essa rota né em menor
+tempo Entra muitos problemas de otimização dentro dessa classe e da novamente a gente espera que o
+computador qu consiga resolver esse tipo de problema de maneira mais eficiente até agora falando mais
+eficiente né mas o que que é esse mais eficiente esse mais eente pode ser em três questões ele pode ser mais rápido a
+gente pode resolver esse problema de mais rápida Então a gente vai em vez de demorar horas vai demorar minutos ah a
+gente pode são como são problemas de timaços a gente pode achar uma solução melhor então Levaram mais ou menos o
+mesmo tempo de computação mas achar uma solução melhor ou senão achar uma
+solução no mesmo tempo uma solução tão boa quanto mas usando menos recursos
+menos recurso menos energia então o computador quântico trazer uma otimização ali no uso de energia mas
+outra coisa que a gente vê aqui nesse plot nesse nesses dados né que a computação quântica ainda é uma coisa
+pro Futuro né tá ali para 201 2025 até 2035 onde né Para muitos setores ali o
+impacto é bem mínimo ah nesses próximos 5 anos Ah mas isso não significa que a
+computação quântica já evoluiu bastante pode ir pro próximo ali para mim hoje a gente já tem computadores
+
+Slide 4:
+quânticos que trazem o que a gente chama de vantagem quântica que que que é isso a gente tem computador quântico que já
+foi usado para resolver um problema de forma muito mais eficiente que um computador clássico jamais conseguiria
+ah na verdade já faz um tempo em 2019 a Google né com computador quântico camor
+de 53 kbits então 53 bits quânticos ele conseguiu resolver Em 200 segundos algo
+que eles estimavam que demorariam 10.000 anos para ser resolvido do computador Suit da IBM que na época era o maior
+super computador que a gente tinha na época Esse resultado é 10.000 anos né ninguém rou eh era só uma estimativa foi
+bem contestada pela própria IDM ela foi contestada e hoje é mais aceito que esse
+esse cálculo demoraria A 600 desculpa 60 horas né esse computador mas mesmo assim
+de 200 segundos para 60 horas Essa não foi a única demonstração de vantagem qu
+a gente teve várias demonstrações depois disso ah uma interessante também que vem
+logo depois ali pela Universidade de ciência e tecnologia da China eles usaram um computador quântico de 66
+kbits e resolveram em 72 minutos algo que eles estimam que demoraria 8 anos
+para resolvido dentro do S também né foi contestada ali que se calculam que
+demoraria mais de um ano um ano e pouquinho mas mesmo assim né de 72
+minutos para mais de um ano usando um computador clássico mas uma coisa que sempre vem a
+pergunta né Que problema que esses computadores resolvem aqui é um pouquinho desanimador
+Ahã desanimador para quem não é da área da Computação quântica né quem pra gente é bem interessante já é uma coisa é um
+negócio bem legal ah mas o problema que esses computadores quânticos resolvem são problemas que foram
+desenvolvidos especificamente para demonstração de vantagem quântica então eles não são problema tipo prático do
+dia a dia não é o que a gente vai ver assim no nosso dia a dia que a gente vai conseguir usar a empresa vai conseguir
+usar para trazer vantagem são problemas que são modelados especificamente pra gente mostrar que o computador quântico
+É melhor então é uma coisa que foi desenvolvida para ser difícil no computador clássico não tem como fazer
+de maneira eficiente o computador passo Mas que o qu consiga fazer de maneira
+eficiente e hoje infelizmente a gente já não tem ainda um computador quântico que nos Traga uma vantagem e uma vantagem
+prática né mas Esperamos que isso venha daqui pouco tempo pode ir pro próximo slide para
+
+Slide 5:
+mim ah muitas empresas hoje em dia estão construindo computadores co a gente tem
+a IBM a gente tem a Google a gente tem a Microsoft para nomear as mais conhecidas mas tem diversos startups tem G iq ã
+kera e eu trouxe aqui um um Road map né desento da queera pra gente tentar ver
+um pouquinho como que tá aação quântica hoje e o que que eles estão prometendo pro Futuro hoje nessa Startup ela tem um
+computador quântico de 256 cuits então bastante além daqueles 66 né que a gente
+viu no slide passado e eles esperam que até 2026 tá logo aí né 2024 já acabou a
+gente tem só 2025 2026 eles esperam ter um computador quântico com mais de 10.000
+kbs e para 2026 eles esperam já ter um ganho prático Então já consegui usar um
+computador quântico de maneira prática pela indústria que não seja algo que ah
+apenas acadêmico né que alguém consiga usar para realmente resolver o seu seu problema esse aqui é só um dado a gente
+tem diversas empresas Ah eu acho que esse aqui é o mais otimista 2026 não sei
+se eu estaria tão otimista assim ah mas um dado que muitas empresas trazem é
+2030 uma data né um objetivo que até 2030 a gente com certeza vai ter um
+computador quântico que a gente vai usar vai ter para uso prático a EDM tem esse
+esse foco que muitas outras empresas também e aqui acaba a minha primeira
+parte se puder ir pulando pro próximo ali então eu só queria trazer mais ou menos uma motivação né o porquê da
+Computação quântica O que que a gente consegue usar ah como a gente consegue para que que a gente consegue usar o
+computador quântico um pouquinho das perspectivas que a gente tem agora eu queria falar um pouquinho das estr da
+Computação quântica Ah falar um pouquinho dos princípios ali da mecânica quântica a gente usa para fazer
+
+Slide 6/7:
+computação Então eu queria começar né falando sobre superposição toda vez que vocês vão ler algum artigo de não seja
+computação quântica mas qualquer coisa quântica né física quântica você sempre falar superposição entrelaçamento de vez em quando medida e
+o que significa Exatamente isso a gente não sabe muito bem a gente tem uma Model
+matemática muito boa que a gente consegue fazer previsões mas o que realmente é isso ainda é um tópico meio
+filosófico mas para computação qu a gente já tem bem definido o que essas coisas trazem pra gente pode fular pro
+próximo para mim na computação quântica a questão da
+superposição ela significa basicamente pra gente uma capacidade exponencial de
+armazenamento aqui a gente tem uma ideia se a gente pegar
+23 bits quânticos então 23 kbits a gente consegue armazenar lá dentro o
+equivalente a 1 MB de informação clássica então 23 e como a esquema
+capacidade exponencial né a cada bit quântico que a gente adiciona a gente dobra essa capacidade Então se a gente
+adicionar mais 10 bits quânticos vai ter lá mais vai ter Liv quatro vezes mais
+capacidade deamento então então né com 33 bits qu antic já tem 1 GB de
+informação ah com 37 já tem 16 GB é o que o meu notebook tem eh com
+43 bits quânticos já vai para 1 TB então é um crescimento exponencial né a gente
+consegue ver ali na escala logarítmica al do do plot então aqui a gente já consegue ver
+um pouquinho do e por né Tem uma ideia do Por que a computação quântica nos traz a uma vantagem
+Ah e a gente consegue também ter um um pensamento um pouquinho inverso e como
+seria difícil simular né a um computador quântico dentro do computador clásico
+porque por exemplo se a gente simular 33 bits quântico a gente precisaria no mínimo 1 GB Então esse é algo mínimo né
+na verdade a gente precisa algum muito mais que isso 16 vezes mais que
+isso mas só para salientar né Essa essa capacidade exencial de armazenamento não
+quer dizer o pendrive quântico não é o HD quântico aqui a gente tá falando na memória de operação então fosse a
+memória R então é a memória que o computador quântico tem disponível para fazer computação a gente não vai usar
+ter pendrives quânticos pelo menos não tão cedo agora vamos falar um pouquinho
+sobre entrelaçamento você fá pro próximo para mim o entrelaçamento é basicamente uma
+
+Slide 8:
+interação entre objetos que estão em superposição Então se a gente tem dois objetos em superposição a gente consegue
+entrelaçar eles eh a gente consegue fazer uma relação entre esses objetos e é o entrelaçamento que permite que a
+gente faça uma estrutura tem uma estrutura dentro da superposição Ah e a
+gente usa muito entrançamento para fazer o que a gente chama do paralelismo co Então vamos imaginar o seguinte cenário
+Imagine que a gente tem uma função função par mesmo que ela recebe uma variável né recebe um argumento e
+retorna O valor pra gente imagina que essa variável né a gente chama ela vai ter um passo de computação para computar
+aquela função mas agora imagina que essa variável que vai entrar na função esse
+argumento ele vai tá em superposição então a gente pode estar Imagine que a gente tem 32 bits pode estar dois na 32
+estado eh estados ao mesmo tempo e agora a gente passa essa variável em
+superposição paraa nossa função o que que o computador quente vai fazer ele vai computar todos esses valores em
+paralelo então é como se a tivesse uma capacidade exponencial de paralelismo também com apenas um passo de computação
+a gente consegue computar uma quantidade enorme de dados então novamente né a gente
+consegue ter mais ou menos uma ideia de por um computador po uma vantagem para
+ser sincero a primeira vez que eu vi isso eu achei que era isso eu achei Ah então tá aí né Tá aí o motivo porque o
+computador quântico é melhor a gente tem uma capacidade exponencial e paralelismo Mas tem uma pegadinha ali
+ah a resposta dessa Computação na da superposição Então a
+gente tem um estado de superposição que a gente vai usar computação o resultado ele também vai est numa superposição e
+como é que a gente tira o resultado delro do computador quântico a gente mede ele a gente mede os pes e o que que
+é medir medir é basicamente a única forma que a gente tem de trazer
+informação clássica de dentro do computador quântico e é como se a gente olhasse pro computador quântico e o que
+que vai acontecer quando a gente olha pro computador quântico um dos resultados daquela superposição vai ser
+retornado pra gente então a gente mede e basicamente um desses fluxos de computação vai retornar pra gente só
+Qual que é o problema a partir do momento que a gente mede o estado ele colapsa então se a gente fez toda aquela
+Computação em paralelo e depois mediu a gente vai retornar um elemento apenas
+daquele daquele estado né a superposição e a superposição vai colapsar se a gente medir nova ente a gente vai medir sempre
+o mesmo Estado então pra gente construir um algoritmo quântico a gente tem que ser
+um pouquinho mais esperto a gente não pode só usar o paralelismo quântico e logo em seguida medir pode ir próximo
+
+Slide 9:
+slide tamb Então como é que a gente constrói um algoritmo normalmente aqui eu tenho
+uma ideia uma ideia meio geral ah Eu dividi ele em cinco passos normalmente né no algoritmo
+quântico a gente não quer resolver um problema quântico a gente não quer quer achar a solução de um problema quântico
+a gente quer achar a solução de um problema clássico a gente tem um problema no nosso mundo cotidiano que a gente quer resolver então o primeiro
+passo é carregar né pro computador quântico essas informações clássicas depois a gente vai passar por um
+processo de gerar superposição Então a gente vai gerar uma superposição e usar
+o entrelaçamento para fazer a questão do paralelismo quântico e no final o que
+que a gente vai fazer a gente tem que passar por um processo de interferência então perceba que aqui ó a
+gente gerou superposição a gente operou na superposição a resposta vai tá dentro da
+superposição só que a gente não consegue tirar essa resposta de maneira eficiente então o que que a gente faz a gente vai
+ter que passar P um processo de interferência da mesma maneira que a superposição ela pode ser criada né a os
+elementos da superposição pode se interferir entre si de maneira a reduzir
+a quantidade de informação que tem dentro daquela superposição então no final do algoritmo quântico normalmente
+a gente vai fazer um processo de redução ah dos elementos e proposição para depois a gente fazer uma medida e então
+retornar pra gente o resultado da Computação Mas beleza né Foi bem
+abstrato ainda as coisas vamos olhar um pouquinho melhor Ah um elemento específico ali da Computação quântica
+vamos ver mais ou menos como é que funciona a um bit quântico poder passar mais um slide para
+
+Slide 10/11:
+mim o bit quântico né O que bit que eu falei é o que a gente traz de análogo do
+bit clássico então na computação clássica a gente vai ter Ah o bit né que pode estar no estado zero e um a gente
+normalmente pensa no interruptor de luz né então pode tá ligado pode est desligado na computação quântica a gente
+também tem isso a gente tem o estado zero a gente tem o Estado um só que a
+gente também pode estar na superposição desses dois estados e como é que é essa superposição é como se a gente tivesse
+né os dois estados ao mesmo tempo e a gente representa isso a partir uma soma
+onde Dentro dessa soma a gente vai ter aqueles elementos alfa e beta que basicamente a gente chama de amplitude
+de probabilidade que eles ditam para mim Ah ditam pra gente né Qual que é a
+probabilidade quando a gente media aquele kbit ele colapsar em um ou colapsar em zero só que esses alfa e
+beta eles são números complexos Então o que a gente tem na computação quântica mesmo né o bit quântico a gente tem uma
+esfera então o bit quântico ele é representado uma esfera onde o estado né
+então a esfera seria o nosso interruptor mas o estado né saber se ele tá desligado ou ligado é um ponto na casca
+dessa ca então um pontinho lá em cima é zero um pontinho lá ali embaixo é um e
+um ponto em qualquer elemento dessa esera vai ser a a superposição pode
+passar mais uma para mim e da que que é o processo de computação o processo de computação é basicamente pegar esse
+ponto e mover de um lado pro outro então se a a gente tem um kbit né a gente vai basicamente aplicar operações que vão
+mover aquele ponto ah de de um lugar para um outro né Qualquer aqui da nossa
+esera isso que a gente tá vendo é basicamente um kbit se a gente tivesse mais kbits a gente não vaia conseguir
+olhar muito bem pra esfera porque com mais kbits a a nossa esfera acaba indo para mais dimensões então não sei não
+sou muito bom para ver esferas de quatro dimensões acho que tá muito interessante seis 7 oito pode passar para mim mais um
+e as operações que a gente usa para fazer essa computação a gente chama de portas lógicas quânticas a gente troue
+
+Slide 12:
+né na computação clássica então na computação clássica no circuito né Tem circuit a tem os gates as portas lógicas
+na compunção quântica a gente também tem um análogo que seria as portas lógicas quânticas a gente normalmente trabalha
+assim com portas de um queb Então a gente vai manipular aquele ponto na esera uma porta bem conhecida é aquela
+porta de ramar Ah ela basicamente vai pegar um kbit tá no estado Zero no estado um e vai colocar em superposição
+Então vai sair de um estado clássico para um Estado quântico e a gente também tem portas e mútiplos Kit a mais famosa
+aqui é a cenop aqui é basicamente a gente vai ter a gente recebe dois pbits e que usa o
+primeiro tbit como controle para fazer um bit flip no segundo tbit então é o l
+sabe do clá clássico mesmo é o norte né que vai negar o estado e agora vamos dar
+uma olhadinha como é que a gente consegue usar essas portas aqui então dentro do Cat vamos ver um programa bem
+simplesinho pode passar mais um para
+mim e para ver como é que a gente consegue usar essas portas eu vou trazer aqui a eu V falar um pouquinho né sobre
+a plataforma de programação quântica a gente está desenvolvendo dentro da US pode passar mais um para
+
+Slide 13/14:
+mim Ah que é a plataforma Cat o cat né é uma plataforma open source ah
+basicamente permite que você desenvolva e teste uma aplicação quântica no seu próprio computador hoje né a gente tá na
+versão 0.8 ainda tá em desenvolvimento né a gente tá Ah toda hora melhorando ela mas hoje ela
+já tá pronta para outo e essa plataforma né open source ela tem três principais componentes hoje o primeiro deles é uma
+a de programação em Python então ali o nosso OB vai trazer né pro pro P apenas
+as funções tipos e tudo tudo que é sabe pra programação quântica Mas a gente não
+tem objetivo de reinventar a roda né a gente quer pegar ao máximo o que já tem
+consolidado de Python para e usar isso com programação quântica então A ideia é facilitar então
+a programação de de de software quântico só a gente também tem uma biblioteca de
+temos de edição em Rust a gente sabe que Python não é linguagem mais rápida do mundo né longe disso então Então a gente
+tem uma bibloteca tem exeção que basicamente faz toda a compilação do Cup faz toda a gerenciamento ah dos T bits e
+isso é feito em Rust Então a gente tem uma camadinha ali de par para facilitar a programação mas tudo que é pesado é
+feito dentro ali do Rust e a gente também traz um simulador quântico embutido na plataforma Então você
+consegue tanto programar quanto a gente não precisa ter um computador quântico a gente consegue usar o simulador para
+fazer a para testar essa aplicação pode passar mais um para mim
+
+slide 15:
+bem antes da gente olhar pro código né o código tá no próximo slide ali eu só queria falar mais ou menos o que que é um programa quântico né Ant ver isso um
+programa quântico na verdade raramente vai ser um um programa puramente quântico normalmente que a gente tem é
+um programa clássico quântico ah onde a gente vai misturar né instruções clássicas e instruções quânticas se a
+gente manda rodar um programa clássico quântico Ah o que que vai acontecer tudo que é clássico vai rodar normalmente no
+seu computador mas o que for de instrução Cica ah loc no kbit aplica tal porta no kbit Med
+kbit vai gerar uma instrução pricat Então o licat que faz essa
+intermediação entre o teu código exitando e o computador p e o licat ele
+vai fazer todo o gerenciamento do da daquelas chamadas para gerar um código quântico que pode ser executado por um
+computador quântico ou um simulador e daí o momento que o computador clássico precisa alguma
+informação do computador quântico o que que é isso quando o computador clássico precisa do resultado de uma medida do
+computador quântico o licat manda informação pro computador quântico o computador quântico vai processar e vai
+retornar para o computador clássico essa informação e daí pro computador clássico
+ele vai basicamente receber uma sequência de zeros e uns ah quais pbits foram medid né qual foi o resultado da
+da medição dos pbits e é papel do computador clássico dá uma Interpretação
+para esse resultado então o computador quântico não sabe que ele tá resolvendo se lá um algoritmo ali para fazer
+fatoração ele só exas coisas é papel do computador clássico interpretar realmente o que que significa a aquele
+resultado das medidas e também é papel do computador clássico fazer todo o carregamento né das informações clássicas para dentro do circuito pode
+passar mais um Então vamos ver Finalmente um codigo Zinho ali em
+
+Slide 16:
+Cat então toda vez que a gente quer construir uma aplicação quântica a primeira coisa que precis fazer é criar
+um processo o processo é quem é responsável por fazer o gerenciamento da
+sua execução então o processo ele é vinculado ao computador quântico ou um
+simulador aqui né na nessa primeira linha depois do Import a gente tá
+criando um processo a gente não tá configurando nada então esse processo ele tá vai mandar a exeção direta pro
+simulador a gente poderia passar ali para mandar pro computador p da IBM a gente já tem isso desenvolvid ouvido mas
+se a gente não configurou nada a gente tá mandando direto pro simulador depois disso a gente tá alocando dois bits
+quânticos Então a gente tem o qbit a e o qbit b ah ali claro não são bits quânticos mesmo né a gente tá é uma
+referência pros bits pros bits quânticos dentro do computador e daí a gente tá aplicando as
+portas lógicas F Então a primeira coisa que a gente faz é aplicar uma porta ramar ah por padrão né em várias
+plataformas a gente usa uma única letra para representar essa essa porta lógica e aqui no CAT a porta lógica quântica é
+basicamente uma função então a gente é é uma função que cementa aquela
+porta depois disso a gente tá implementando a do Cot essas duas
+instruções aqui elas é equivalente à aquela função do senot que eu mostrei lá só que aqui eu tô meio que implementando
+na mão para mostrar para vocês como aquele senot funciona que que a gente tem aqui ah essa instrução o if control
+é como se fosse um if dentro no computador qu então ali o if control se
+o kbit a ele tiver no estado 1 essa porta x vai ser aplicada no kbit
+B O que que é essa porta X é aquela porta not né a porta de bit flip Então os kbits Eles começam em zero se o x for
+aplicado no B ele vai pro um mas se o kbit a tiver no estado zero então se não
+tiver no estado um aquela porta x não é aplicada Só que tem uma questão lembra que eu
+mostrei lá o ramar o ramar ele pega um quit que tá em no estado clássico então ele começa no estado zero e coloca ele
+no estado quântico ele coloca no estado zero e 1 logo quando a gente chamar essa
+instrução o a ele não tá em zero ele não tá nem um Ele tá nos dois estados ao mesmo tempo então o que que acontece a
+aplicação Dessa porta lógica agora ela vai entrar numa superposição Então a
+gente tem nos bit a que tá tanto em zero tanto em um logo o nosso X Ele vai ser
+aplicado e não vai ser aplicado Então como o x vai ser aplicado
+não vai ser aplicado o estado do do do kbit B ele vai tá entre o estado zero e um né onde não foi aplicado e foi
+aplicado op E essas duas sumiu ali
+gente voltou Ah e esses dois estados de superposição então aqui tá em superp e
+aqui tá em superv eles tem uma relação então a relação aqui é dada pelo kbit a
+e b então esses dois são ção e eles tem uma relação entre eles que é oçamento
+aqui do lado a gente consegue ver mais ou menos né matematicamente usando a notação dir que a gente usa na mecânica
+quântica os estados desses tbit e essa esse entrelaçamento Entre esses dois
+kbit ah traz uma coisa bem interessante pra gente se a gente medir qualquer um
+desses dois kbits vamos falar se a gente medir o kbit a a gente tem 50% de chance de medir zer 50% de chance de medir um
+isso é a mesma coisa pro P bit B Porém quando a gente mede um desses
+servit Por exemplo quando eu meço o kbit b o kbit a ele vai pro WhatsApp
+exatamente o mesmo Estado então se eu meço um no que bit b o kbit a também vai
+ser medido um a gente cons ver isso bem claramente aqui já tá em superposição né
+Ah aqui também vai gerar uma superposição e quando a gente mede
+aquela superposição Ela vai colapsar para um Estado coerente então por exemplo se eu medir um aqui no kbit b a
+única forma de medir um aqui no kbit B é se o kbit a também tivesse em um porque
+o kbit a precisa est em um pro meu x ser aplicado no b e daí eu poder medir Ah um
+nele da mesma forma a única maneira de zero o kbit b é se o kbit a também tiver
+em zero para mim não quer aplicado o x e ele continuar dentro do Estado zero então a gente consegue ver ali mais ou menos a questão do ah
+entrelaçamento esse estado que é criado Ele é bem conhecido né na contação quântica como estado de Bel ah na
+computação qu a gente não usa tanto ele mas na comunicação qu a gente usa bastante porque uma coisa interessante
+que a gente tem sempre a garantia que a medida dos dois kbits vão ser iguais Independente de quem seja seja medida
+primeiro independente também ah da distância que esses cbit estão
+então a gente poderia pegar por exemplo um cbit lá em Mar pbit aqui na terra medir exatamente ao mesmo tempo a gente
+teria os dois pbits garantido que vão medir Exatamente no mesmo estado e daí
+isso é bem usado lá para criptografia quântica pode ir al pro próximo
+
+Slide 17:
+slide então gente aqui apesar do da palestra falar que apresentar bastante
+né de quântica Ah eu vou apresentar bem pouco sobre ali o código Ah tem muita
+mais coisa para falar apresentação quântica ali só foi um gostinho o pessoal não quis me deixar aqui 3 horas
+falando então eu fui obrigado a trazer referências para vocês se é uma coisa que me interessou para vocês programação
+quântica computação quântica uso da plataforma no sétimo workshop computação
+qu da que aconteceu finalzinho do início do mês passado ah a gente teve um minicurso dividido em
+três partes foram lá 4 horas de minicurso onde eu apresentei como usar a
+plataforma e falei bastante mostrei código ali de algumas instruções específicas da Computação quântica então
+a gente viu o Wi control ali mas tem outras coisas que a gente consegue fazer que só tem dentro da Computação qu Ah e
+tudo isso ele foi gravado e tá disponível dentro do YouTube do grupo de computação co Então se acessar lá gur né
+no youtube.com vocês vão ver todos os minicursos tá tudo lá gravado tá ficou
+bacana gravação desse desse ano vocês também pode acessar o site do workshop
+lá a gente vai gente tem várias palestras todo ano acontece né a gente tá desde 2018 fazendo workshop tem
+palestrantes brasileiros internacionais sobre assuntos diversos de computação quântica Então se interessar recomendo
+bastante vocês acessarem ali a o canal do do grupo
+gente eu termino minha apresentação por aqui tem mais um slide ali é só para
+finalizar a apresentação Ah e agora eu fico aberto a perguntas
